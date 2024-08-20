@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Restaurant Webpage"/>
+    <link rel="stylesheet" href="./styles/output.css" />
+    
+    <title>Restaurant Webpage</title>
+</head>
+<body>
+    <!--Extension -> Tailwind CSS InteliSense
+    open t-folder where your project is, use t-directory
+    w/ command
+    cmd
+    npm init -y
+    (Node.js)
+    <link rel="stylesheet" href="styles/style.css">-->
+
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img src="./src/hamb-1.png" alt="Icon" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+            <h1 class="text-3xl mt-4 font-bold text-white">Restaurant</h1>
+
+            <span class="text-white font-medium">Brazil, São Paulo - SP</span>
+
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span>Open Everyday - 09:00am to 10:30pm</span>
+            </div>
+        </div>
+    </header>
+
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Main Menu</h2>
+    <!--'sm' = 640px // '@media (min-width: 640px) {...}'
+        'md' = 768px // '@media (min-width: 768px) {...}'
+        'lg' = 1024px // '@media (min-width: 1024px) {...}'
+        'xl' = 1280px // '@media (min-width: 1280px) {...}'
+        '2xl' = 1536px // '@media (min-width: 1536px) {...}'-->
+
+    <div id="menu">
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <div class="flex gap-2">
+                <img src="./src/hamb-1.png" alt="SmashBurguer" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">SmashBurguer</p>
+                    <p class="text-sm">Bread with natural yeast, 160g burguer, chesse and mayonnaise.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">4.00$</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash" data-price="4.00"><i class="fa fa-cart-plus text-lg text-white"><small>_</small></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex gap-2">
+             <img src="./src/hamb-2.png" alt="DoubleBurguer" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">DoubleBurguer</p>
+                    <p class="text-sm">Bread with natural yeast, 160g burguer, chesse and mayonnaise.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">6.00$</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Duplo" data-price="6.00"><i class="fa fa-cart-plus text-lg text-white"><small>_</small></i></button>
+                    </div>
+                </div>
+
+            </div>
+               
+
+            <div class="flex gap-2">
+                <img src="./src/hamb-3.png" alt="SaladBurguer" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+   
+                   <div>
+                       <p class="font-bold">SaladBurguer</p>
+                       <p class="text-sm">Bread with natural yeast, 160g burguer, chesse and mayonnaise.</p>
+   
+                       <div class="flex items-center gap-2 justify-between mt-3">
+                           <p class="font-bold text-lg">3.50$</p>
+                           <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Salad" data-price="3.50"><i class="fa fa-cart-plus text-lg text-white"><small>_</small></i></button>
+                       </div>
+                   </div>
+   
+               </div>
+
+           <div class="flex gap-2">
+             <img src="./src/hamb-4.png" alt="HomeBurguer" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">HomeBurguer</p>
+                    <p class="text-sm">Bread with natural yeast, 160g burguer, chesse and mayonnaise.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">3.00$</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer da casa" data-price="3.00"><i class="fa fa-cart-plus text-lg text-white"><small>_</small></i></button>
+                    </div>
+                </div>
+
+            </div>
+        
+        </main>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3x1">
+                Drinks
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16" id="menu">
+            <div class="flex gap-2 w-full">
+                <img src="./src/refri-1.png" alt="Coke" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+   
+                   <div class="w-full">
+                       <p class="font-bold">Coke</p>
+   
+                       <div class="flex items-center gap-2 justify-between mt-3">
+                           <p class="font-bold text-lg">1.00$</p>
+                           <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca lata" data-price="1.00"><i class="fa fa-cart-plus text-lg text-white"><small>_</small></i></button>
+                       </div>
+                   </div>
+   
+            </div>
+
+            <div class="flex gap-2 w-full">
+                <img src="./src/refri-2.png" alt="Coke" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+   
+                   <div class="w-full">
+                       <p class="font-bold">Guaraná</p>
+   
+                       <div class="flex items-center gap-2 justify-between mt-3">
+                           <p class="font-bold text-lg">1.00$</p>
+                           <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guarana lata" data-price="1.00"><i class="fa fa-cart-plus text-lg text-white"><small>_</small></i></button>
+                       </div>
+                   </div>
+   
+               </div>
+        </div>
+
+    </div>
+
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
+        <div class="bg-white p-5 rounded-md min-2-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">My Cart</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4"><Address>Address:</Address></p>
+            <input type="text" placeholder="Your Address.." id="address" class="w-full border-2 p-1 rounded my-1">
+            <p class="text-red-500 hidden" id="address-warn">Address's field can't be empty!</p>
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn">Close</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalize Order</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <!--deixar o footer fixo no bottom, msm c/ o scroll da tela-->
+        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+            (<span id="cart-count">0</span>)
+            My Cart
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
